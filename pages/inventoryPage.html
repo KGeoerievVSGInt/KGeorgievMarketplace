@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <script src="marketPage.js"></script>
+    <title>Inventory</title>
+  </head>
+  <body>
+    <header>
+      <a href="../intex.html">
+        <img
+          src="../img/marketPage/vsg_marketplace-mini-logo 1.png"
+          class="homeLogo"
+          alt="VSG Logo"
+        />
+      </a>
+      <p class="marketplace-header">Inventory</p>
+      <ul>
+        <li>Hi,User</li>
+        <li><img src="../img/marketPage/Profile Img.png" alt="" /></li>
+      </ul>
+      <ul class="hamburger-lines" onclick="toggleHamburger()">
+        <li class="lines"></li>
+        <li class="lines"></li>
+        <li class="lines"></li>
+      </ul>
+    </header>
+    <div class="content">
+      <aside>
+        <nav>
+          <ul>
+            <li>
+              <a href="marketPage.html"
+                ><i class="fa-solid fa-store"></i> Marketplace</a
+              >
+            </li>
+            <li>
+              <a href="inventoryPage.html">
+                <i class="fa-regular fa-clipboard"></i>
+                Inventory</a
+              >
+            </li>
+            <li>
+              <a href="pendingOrdersPage.html">
+                <i class="fa-regular fa-clock"></i>Pending Orders</a
+              >
+            </li>
+            <li>
+              <a href="marketPage.html">
+                <i class="fa-solid fa-bag-shopping"></i>
+                My Order</a
+              >
+            </li>
+            <li id="logout">
+              <a href="../intex.html">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="main-content-inventory">
+        <form class="add-new">
+          <div class="add-new-input">
+            <label for="new-add">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 11 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.55176 7.17578C5.28092 7.17578 5.90072 6.92057 6.41113 6.41016C6.92155 5.89974 7.17676 5.27995 7.17676 4.55078C7.17676 3.82161 6.92155 3.20182 6.41113 2.69141C5.90072 2.18099 5.28092 1.92578 4.55176 1.92578C3.82259 1.92578 3.2028 2.18099 2.69238 2.69141C2.18197 3.20182 1.92676 3.82161 1.92676 4.55078C1.92676 5.27995 2.18197 5.89974 2.69238 6.41016C3.2028 6.92057 3.82259 7.17578 4.55176 7.17578ZM8.05176 7.17578L10.9502 10.0742L10.0752 10.9492L7.17676 8.05078V7.58594L7.0127 7.42188C6.31999 8.02344 5.49967 8.32422 4.55176 8.32422C3.49447 8.32422 2.59668 7.95964 1.8584 7.23047C1.12012 6.5013 0.750977 5.60807 0.750977 4.55078C0.750977 3.49349 1.12012 2.5957 1.8584 1.85742C2.59668 1.11914 3.49447 0.75 4.55176 0.75C5.60905 0.75 6.50228 1.11914 7.23145 1.85742C7.96061 2.5957 8.32519 3.49349 8.32519 4.55078C8.32519 4.93359 8.23405 5.36654 8.05176 5.84961C7.86947 6.33268 7.65983 6.72005 7.42285 7.01172L7.58691 7.17578H8.05176Z"
+                  fill="black"
+                />
+              </svg>
+            </label>
+            <input type="text" id="new-add" placeholder="Search..." />
+          </div>
+          <button class="add-new-button">
+            <span></span>
+            <p class="add-new-button-text">Add new</p>
+          </button>
+        </form>
+        <div class="table">
+          <table class="inventory-content">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>For Sale</th>
+                <th>QTY</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Laptop Macbook Pro 16” M1 Max</td>
+                <td>Laptops</td>
+                <td>0</td>
+                <td>2</td>
+                <td class="actions">
+                  <button>
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.8125 2.6875L10.5938 3.90625L8.09375 1.40625L9.3125 0.1875C9.4375 0.0625 9.59375 0 9.78125 0C9.96875 0 10.125 0.0625 10.25 0.1875L11.8125 1.75C11.9375 1.875 12 2.03125 12 2.21875C12 2.40625 11.9375 2.5625 11.8125 2.6875ZM0 9.5L7.375 2.125L9.875 4.625L2.5 12H0V9.5Z"
+                        fill="#ED6C02"
+                      />
+                    </svg>
+                  </button>
+                  <button onclick="confirmPurchase(event)">
+                    <svg
+                      width="10"
+                      height="12"
+                      viewBox="0 0 10 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.34375 0.65625H9.65625V2H0.34375V0.65625H2.65625L3.34375 0H6.65625L7.34375 0.65625ZM2.34375 4V10.6562H7.65625V4H2.34375ZM1 10.6562V2.65625H9V10.6562C9 11.0104 8.86458 11.3229 8.59375 11.5938C8.32292 11.8646 8.01042 12 7.65625 12H2.34375C1.98958 12 1.67708 11.8646 1.40625 11.5938C1.13542 11.3229 1 11.0104 1 10.6562Z"
+                        fill="#ED1C25"
+                      />
+                    </svg>
+                  </button>
+                  <div class="confirmation-popup">
+                    <p>Are you sure you want to remove this item ?</p>
+                    <div>
+                      <button>Yes</button>
+                      <button>No</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pagination-container"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

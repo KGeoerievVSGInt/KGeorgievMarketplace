@@ -1,0 +1,33 @@
+@use "../" as *;
+
+.container {
+  background: url("/img/main/vsg_bg 2.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+
+.logo-container {
+  position: relative;
+  top: 33%;
+  width: 60%;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  a {
+    display: block;
+    width: 13%;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 3vmax;
+    padding: 0.35em 1.5em;
+    text-align: center;
+    background-color: $default-red;
+    color: $white;
+    border-radius: 6px;
+    box-shadow: $shadow-main-logo;
+  }
+}

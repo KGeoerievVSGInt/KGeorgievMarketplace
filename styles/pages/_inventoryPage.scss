@@ -1,0 +1,124 @@
+@use "../" as *;
+.main-content-inventory {
+  @include main-common;
+  overflow-x: auto;
+}
+.add-new {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  &-input {
+    display: flex;
+    flex-grow: 1;
+    input {
+      margin-left: 0.625em;
+      display: inline;
+      width: 87%;
+      font-size: 1em;
+      border: none;
+    }
+    border-bottom: 2px solid #000;
+  }
+
+  &-button {
+    margin-left: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1.25em;
+    border-radius: $radius-small;
+    background-color: $button-success;
+    color: $white;
+    gap: 1em;
+
+    &-text {
+      white-space: nowrap;
+      flex-grow: 1;
+      font-size: 1em;
+      height: auto;
+      margin: auto;
+    }
+    span {
+      padding: 0.625em;
+      display: inline-block;
+      content: "";
+      width: 1em;
+      height: 1em;
+      background-color: $white;
+      clip-path: polygon(
+        0 45%,
+        45% 45%,
+        45% 0,
+        55% 0,
+        55% 45%,
+        100% 45%,
+        100% 55%,
+        55% 55%,
+        55% 100%,
+        45% 100%,
+        45% 55%,
+        0 55%
+      );
+    }
+  }
+}
+.table {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 1.875em;
+  border: $border-gray-pending;
+  border-radius: $radius-small;
+}
+.inventory-content {
+  min-width: 57em;
+  border-spacing: 0;
+  border-radius: $radius-small;
+  th {
+    max-height: 3.125em;
+    text-align: left;
+    padding: 1em 0.75em;
+  }
+
+  td {
+    border-top: $border-gray-pending;
+    border-bottom: $border-gray-pending;
+    padding: 1em 0.75em;
+  }
+}
+
+.actions {
+  position: relative;
+  button {
+    margin-right: 1em;
+    background: none;
+  }
+}
+.confirmation-popup {
+  @include popup-common;
+  width: 20vw;
+  padding: 1em;
+  left: -140%;
+  bottom: -200%;
+  div {
+    @include popup-div;
+    margin-top: 0.625em;
+  }
+  button {
+    @include popup-button;
+  }
+  button:hover {
+    @include popup-button-hover;
+  }
+}
+.confirmation-popup::before {
+  @include popup-div-before;
+  top: -10px;
+  left: 66%;
+}
+.pagination-container {
+  margin-top: auto;
+  height: 40px;
+  border-top: $border-gray-pending;
+}

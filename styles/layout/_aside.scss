@@ -1,0 +1,59 @@
+@use "../" as *;
+
+.content {
+  flex-grow: 1;
+  padding: 2em 1em;
+  display: flex;
+  gap: 2em;
+  align-items: stretch;
+  aside {
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    background-color: $white;
+    border-radius: $radius-large;
+    align-items: stretch;
+    nav {
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      ul {
+        width: 100%;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        li {
+          margin: 0 1.25em;
+          padding: 1em;
+          a {
+            font-size: 0.875em;
+            text-decoration: none;
+            color: $black;
+            i {
+              color: $default-red;
+              margin-right: 1.25em;
+            }
+          }
+        }
+        #logout {
+          margin-top: auto;
+        }
+
+        li:hover {
+          background-color: $default-red;
+          border-radius: $radius-medium;
+          box-shadow: $shadow-navigation;
+          a {
+            color: $white;
+          }
+          i {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

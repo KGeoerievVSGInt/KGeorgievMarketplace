@@ -1,0 +1,113 @@
+@use "../" as *;
+.main-content {
+  @include main-common-primary;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 2.5em 1.25em;
+  gap: 2.5em;
+  overflow: auto;
+}
+.card-item {
+  position: relative;
+  box-shadow: $shadow-card-item;
+  border-radius: $radius-small;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 100%;
+    border-radius: $radius-card-item;
+  }
+}
+.item-options {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  &-info {
+    flex-grow: 1;
+    padding: 0.75em;
+    &-category {
+      display: block;
+      font-size: 0.75em;
+      color: $gray;
+    }
+  }
+  &-purchase {
+    margin-right: 1em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: stretch;
+  }
+}
+.dropdown {
+  position: relative;
+
+  span {
+    display: block;
+    font-size: 0.5em;
+    color: $gray;
+  }
+  button {
+    cursor: pointer;
+    border: none;
+    border-bottom: $border-black;
+    background-color: $white;
+    span {
+      color: $black;
+      font-size: 1em;
+      display: inline;
+    }
+  }
+  &-child {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    z-index: 4;
+    .option {
+      font-size: 0.83em;
+      cursor: pointer;
+    }
+  }
+}
+.purchase-button {
+  margin-left: 10px;
+  border: none;
+  display: inline-block;
+  padding: 0.375em 0.375em 0.125em 0.375em;
+  background-color: $default-red;
+  border-radius: $radius-xl;
+}
+.purchase-button:hover {
+  background-color: lighten($default-red, 25%);
+}
+.confirmation-popup {
+  &.market {
+    @include popup-common;
+    width: 17em;
+    left: 17%;
+    bottom: -47%;
+    z-index: 4;
+    div {
+      @include popup-div;
+    }
+    button {
+      @include popup-button;
+    }
+    button:hover {
+      @include popup-button-hover;
+    }
+  }
+}
+.confirmation-popup.market::before {
+  
+  content: "";
+  @include popup-div-before;
+  top: -0.625em;
+  left: 48%;
+}
+.confirmation-popup.active {
+  left: -30%;
+}
+.confirmation-popup.active::before {
+  left: 81%;
+}

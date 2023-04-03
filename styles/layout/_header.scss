@@ -1,0 +1,58 @@
+@use "../" as *;
+
+header {
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+
+  .homeLogo {
+    margin-left: 0.5em;
+    margin-top: 0.25em;
+  }
+  p {
+    align-self: center;
+    font-family: "Montserrat";
+    font-size: 2em;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      padding: 0.25em;
+      font-size: 0.75em;
+      img {
+        margin-right: 0.5em;
+      }
+    }
+  }
+}
+.hamburger-lines {
+  display: none;
+  height: 100%;
+  margin-top: 1.125em;
+  cursor: pointer;
+}
+.lines {
+  height: 0.25em;
+  width: 2.5em;
+  background-color: $default-red;
+  margin: 0.375em 1.5em;
+  padding: 0;
+  border: $border-red;
+  border-radius: $radius-small;
+}
+.hamburger-menu {
+  display: "none";
+  flex-direction: column;
+  background-color: $white;
+  left: 1em;
+  top: 5.125em;
+  z-index: 4;
+  justify-content: stretch;
+  flex-grow: 1;
+}

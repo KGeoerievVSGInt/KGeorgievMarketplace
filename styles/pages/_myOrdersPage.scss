@@ -1,0 +1,65 @@
+@use "../" as *;
+.main-content-orders {
+  @include main-common;
+  align-items: stretch;
+  .pending-orders {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    tr {
+      border: $border-gray-pending;
+    }
+    th {
+      &:first-child {
+        border-radius: $radius-pending-list-first-child;
+      }
+      &:last-child {
+        border-radius: $radius-pending-list-last-child;
+      }
+      background-color: $pending-header;
+      text-align: left;
+      padding: 1em 0.75em;
+    }
+    td {
+      &:first-child {
+        border-radius: $radius-pending-list-first-child;
+        border-left: $border-gray-pending;
+      }
+      &:last-child {
+        border-radius: $radius-pending-list-last-child;
+        border-right: $border-gray-pending;
+      }
+      padding: 0.5em 0.75em;
+      border-top: $border-gray-pending;
+      border-bottom: $border-gray-pending;
+    }
+    .action {
+      display: flex;
+      position: relative;
+      justify-content: space-around;
+      button {
+        background: none;
+      }
+      .confirmation-popup {
+        @include popup-common;
+        width: 17vw;
+        left:-100%;
+        bottom: -300%;
+        div {
+          @include popup-div;
+        }
+        button {
+          @include popup-button;
+        }
+        button:hover {
+          @include popup-button-hover;
+        }
+      }
+      .confirmation-popup::before {
+        content: "";
+        @include popup-div-before;
+        top: -10px;
+        left: 83%;
+      }
+    }
+  }
+}

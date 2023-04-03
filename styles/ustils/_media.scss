@@ -1,0 +1,102 @@
+@use "../" as *;
+@media only screen and (max-width: 768px) {
+  .logo-container {
+    width: 70%;
+    a {
+      width: 25%;
+    }
+    img {
+      margin-bottom: 15%;
+    }
+  }
+  .content {
+    aside {
+      flex-grow: 1;
+      display: none;
+      nav {
+        height: 100%;
+      }
+    }
+  }
+  header {
+    p {
+      font-size: 1.125em;
+      font-weight: 700;
+    }
+    ul {
+      display: none;
+    }
+  }
+  .hamburger-lines {
+    display: block;
+  }
+  main {
+    flex-direction: column;
+  }
+  .card-item {
+    width: 100%;
+  }
+  .confirmation-popup {
+    &.market {
+      left: 0%;
+      bottom: -35%;
+    }
+  }
+  .confirmation-popup.market::before {
+    left: 87%;
+  }
+  .main-content-inventory{
+    align-items: flex-start;
+  }
+  .main-content-pending {
+    @include table-media;
+  }
+  .main-content-orders {
+    @include table-media;
+    .pending-orders {
+      .action {
+        padding: 1em;
+        p {
+          display: inline;
+        }
+        button {
+          float: right;
+        }
+        .confirmation-popup {
+          height: auto;
+          width: 75vw;
+          left: 0;
+          bottom: -200%;
+          &::before {
+            left: 93%;
+          }
+        }
+      }
+      td:nth-child(5) {
+        border: none;
+        border-radius: 0;
+        border-top: $border-gray-pending;
+      }
+      td:nth-of-type(1):before {
+        content: "Code";
+      }
+      td:nth-of-type(2):before {
+        content: "Qty";
+      }
+      td:nth-of-type(3):before {
+        content: "Price";
+      }
+      td:nth-of-type(4):before {
+        content: "Ordered by:";
+        @include inline-child();
+      }
+      td:nth-of-type(5):before {
+        content: "Order Date:";
+        @include inline-child();
+      }
+      td:nth-of-type(6):before {
+        content: "Status:";
+      }
+    }
+  }
+}
