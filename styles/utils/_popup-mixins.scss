@@ -1,4 +1,4 @@
-@use "../ustils/variables" as *;
+@use "../utils/variables" as *;
 @mixin popup-common {
   display: none;
   position: absolute;

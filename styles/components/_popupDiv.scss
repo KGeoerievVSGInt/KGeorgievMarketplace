@@ -1,4 +1,4 @@
-@use "../index" as *;
+@use "../" as *;
 .popupCommon {
     display: none;
     position: absolute;
@@ -8,10 +8,9 @@
     padding: 1em;
   }
   .popupDiv {
-    display: flex;
-    justify-content: flex-end;
+    @include flex-container($justify:flex-end);
     margin-top: 0.5em;
-    gap: 10px;
+    gap: 0.625em;
   }
   .popupButton {
     padding: 0.25em 1em;

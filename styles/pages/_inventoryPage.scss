@@ -4,12 +4,9 @@
   overflow-x: auto;
 }
 .add-new {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-
+  @include flex-container($justify: flex-end, $align: flex-end);
   &-input {
-    display: flex;
+    @include flex-container();
     flex-grow: 1;
     input {
       margin-left: 0.625em;
@@ -23,9 +20,7 @@
 
   &-button {
     margin-left: 1.25em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-container($justify: center, $align: center);
     padding: 0.75em 1.25em;
     border-radius: $radius-small;
     background-color: $button-success;
@@ -64,8 +59,7 @@
   }
 }
 .table {
-  display: flex;
-  flex-direction: column;
+  @include flex-container($direction:column);
   flex-grow: 1;
   margin-top: 1.875em;
   border: $border-gray-pending;

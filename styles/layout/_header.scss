@@ -2,9 +2,7 @@
 
 header {
   background-color: $white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-container($justify:space-between, $align:center);
   height: 50px;
 
   .homeLogo {
@@ -17,10 +15,8 @@ header {
     font-size: 2em;
   }
   ul {
-    display: flex;
+    @include flex-container($justify:center, $align:center);
     list-style-type: none;
-    justify-content: center;
-    align-items: center;
 
     li {
       padding: 0.25em;

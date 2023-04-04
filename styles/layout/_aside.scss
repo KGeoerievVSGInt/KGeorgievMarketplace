@@ -3,28 +3,24 @@
 .content {
   flex-grow: 1;
   padding: 2em 1em;
+  @include flex-container($align:stretch);
   display: flex;
   gap: 2em;
-  align-items: stretch;
   aside {
-    display: flex;
-    flex-direction: column;
+    @include flex-container($direction:column, $align:stretch);
     width: 27%;
     background-color: $white;
     border-radius: $radius-large;
-    align-items: stretch;
     nav {
       flex-grow: 1;
       width: 100%;
-      display: flex;
-      align-items: stretch;
+      @include flex-container($align:stretch);
       ul {
         width: 100%;
         padding-top: 2em;
         padding-bottom: 2em;
         list-style-type: none;
-        display: flex;
-        flex-direction: column;
+        @include flex-container($direction:column);
         li {
           margin: 0 1.25em;
           padding: 1em;

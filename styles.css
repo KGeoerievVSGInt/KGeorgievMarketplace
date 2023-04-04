@@ -57,9 +57,9 @@ header p {
 }
 header ul {
   display: flex;
-  list-style-type: none;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
 }
 header ul li {
   padding: 0.25em;
@@ -108,16 +108,17 @@ body {
   flex-grow: 1;
   padding: 2em 1em;
   display: flex;
-  gap: 2em;
   align-items: stretch;
+  display: flex;
+  gap: 2em;
 }
 .content aside {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   width: 27%;
   background-color: #ffffff;
   border-radius: 20px;
-  align-items: stretch;
 }
 .content aside nav {
   flex-grow: 1;
@@ -202,8 +203,8 @@ body {
 .item-options-purchase {
   margin-right: 1em;
   display: flex;
-  align-items: flex-start;
   justify-content: stretch;
+  align-items: flex-start;
 }
 
 .dropdown {
@@ -314,8 +315,8 @@ body {
 
 .add-new {
   display: flex;
-  align-items: flex-end;
   justify-content: flex-end;
+  align-items: flex-end;
 }
 .add-new-input {
   display: flex;
@@ -332,8 +333,8 @@ body {
 .add-new-button {
   margin-left: 1.25em;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 0.75em 1.25em;
   border-radius: 6px;
   background-color: #2e7d32;
@@ -534,8 +535,8 @@ body {
   border-right: 1px solid #dadcdd;
 }
 .main-content-orders .pending-orders .action {
-  display: flex;
   position: relative;
+  display: flex;
   justify-content: space-around;
 }
 .main-content-orders .pending-orders .action button {
