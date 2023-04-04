@@ -45,7 +45,7 @@
   .confirmation-popup.market::before {
     left: 87%;
   }
-  .main-content-inventory{
+  .main-content-inventory {
     align-items: flex-start;
   }
   .main-content-pending {
@@ -98,5 +98,30 @@
         content: "Status:";
       }
     }
+  }
+  .modal {
+    .modal-content {
+      img {
+        height: 25%;
+      }
+      width: 100%;
+      margin: 2em 1em 2em 1em;
+    }
+  }
+}
+.item-description {
+  margin: 1em;
+}
+.item-info{
+  flex-direction: column;
+  &-left{
+    width: 100%;
+    &-name{
+      font-size: 1.25em;
+    }
+  }
+  &-right{
+    margin-top: 1em;
+    align-items: flex-start;
   }
 }

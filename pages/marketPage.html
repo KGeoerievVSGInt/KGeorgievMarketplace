@@ -75,6 +75,7 @@
       <main class="main-content">
         <div class="card-item">
           <img
+            onclick="toggleDetailsModal(event)"
             src="../img/marketPage/product-image.png"
             alt="The latest laptop of XY brand"
           />
@@ -138,6 +139,7 @@
         </div>
         <div class="card-item">
           <img
+            onclick="toggleDetailsModal(event)"
             src="../img/marketPage/product-image.png"
             alt="The latest laptop of XY brand"
           />
@@ -201,6 +203,7 @@
         </div>
         <div class="card-item">
           <img
+            onclick="toggleDetailsModal(event)"
             src="../img/marketPage/product-image.png"
             alt="The latest laptop of XY brand"
           />
@@ -264,6 +267,7 @@
         </div>
         <div class="card-item">
           <img
+            onclick="toggleDetailsModal(event)"
             src="../img/marketPage/product-image.png"
             alt="The latest laptop of XY brand"
           />
@@ -327,6 +331,7 @@
         </div>
         <div class="card-item">
           <img
+            onclick="toggleDetailsModal(event)"
             src="../img/marketPage/product-image.png"
             alt="The latest laptop of XY brand"
           />
@@ -389,6 +394,52 @@
           </div>
         </div>
       </main>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <button onclick="toggleDetailsModal(event)">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.8203 1.35156L7.17187 6L11.8203 10.6484L10.6484 11.8203L6 7.17187L1.35156 11.8203L0.179688 10.6484L4.82812 6L0.179688 1.35156L1.35156 0.179688L6 4.82812L10.6484 0.179688L11.8203 1.35156Z"
+              fill="#000"
+            />
+          </svg>
+        </button>
+        <img
+          src="../img/marketPage/product-image.png"
+          alt="The latest laptop of XY brand"
+        />
+        <div class="item-info">
+          <div class="item-info-left">
+            <div class="item-info-left-name">
+              Laptop MacBook Pro 16” M1 Max 32GB RAM 1TB SSD 32 Cores GPU
+            </div>
+            <div class="item-info-left-category">Laptops</div>
+          </div>
+          <div class="item-info-right">
+            <div class="item-info-right-price">5000BGN</div>
+            <div class="item-info-right-quantity">Qty: 2</div>
+          </div>
+        </div>
+        <div class="item-description">
+          This it the description of the product. This it the description of the
+          product. This it the description of the product. This it the
+          description of the product. This it the description of the product.
+          This it the description of the product. This it the description of the
+          product. This it the description of the product. This it the
+          description of the product. This it the description of the product.
+          This it the description of the product. This it the description of the
+          product. This it the description of the product. This it the
+          description of the product.
+        </div>
+      </div>
+      <div class="backdrop"></div>
     </div>
   </body>
 </html>

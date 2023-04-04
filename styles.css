@@ -104,6 +104,16 @@ body {
   flex-direction: column;
 }
 
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  opacity: 50%;
+}
+
 .content {
   flex-grow: 1;
   padding: 2em 1em;
@@ -182,6 +192,7 @@ body {
   flex-direction: column;
 }
 .card-item img {
+  cursor: pointer;
   width: 100%;
   border-radius: 5px 5px 0px 0px;
 }
@@ -300,6 +311,72 @@ body {
 
 .confirmation-popup.active::before {
   left: 81%;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal .modal-content {
+  position: relative;
+  z-index: 4;
+  width: 600px;
+  height: 621px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.modal .modal-content button {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+.modal .modal-content img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 1em;
+}
+.item-info-left {
+  width: 50%;
+}
+.item-info-left-name {
+  font-size: 1.375em;
+  font-weight: 700;
+}
+.item-info-left-category {
+  font-size: 0.875em;
+  color: #9a9a9a;
+}
+.item-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.item-info-right-price {
+  font-weight: 700;
+  font-size: 1.375em;
+}
+.item-info-right-quantity {
+  font-size: 0.875em;
+  color: #9a9a9a;
+}
+
+.item-description {
+  margin: 1em 2em 1em 1em;
 }
 
 .main-content-inventory {
@@ -826,4 +903,28 @@ body {
   .main-content-orders .pending-orders td:nth-of-type(6):before {
     content: "Status:";
   }
+  .modal .modal-content {
+    width: 100%;
+    margin: 2em 1em 2em 1em;
+  }
+  .modal .modal-content img {
+    height: 25%;
+  }
+}
+.item-description {
+  margin: 1em;
+}
+
+.item-info {
+  flex-direction: column;
+}
+.item-info-left {
+  width: 100%;
+}
+.item-info-left-name {
+  font-size: 1.25em;
+}
+.item-info-right {
+  margin-top: 1em;
+  align-items: flex-start;
 }

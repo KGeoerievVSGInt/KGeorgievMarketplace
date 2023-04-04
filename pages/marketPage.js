@@ -39,3 +39,8 @@ function toggleHamburger() {
   const [aside] = document.getElementsByTagName("ASIDE");
   aside.style.display = aside.style.display == "flex" ? "none" : "flex";
 }
+function toggleDetailsModal(e) {
+  e.preventDefault();
+  const modal = document.querySelector(".modal");
+  modal.style.display = modal.style.display == "flex" ? "none" : "flex";
+}
