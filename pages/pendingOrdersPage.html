@@ -5,127 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+  />
     <script src="marketPage.js"></script>
     <title>Marketplace</title>
   </head>
   <body>
-    <header>
-      <a href="../index.html">
-        <img
-          src="../img/marketPage/vsg_marketplace-mini-logo 1.png"
-          class="homeLogo"
-          alt="VSG Logo"
-        />
-      </a>
-      <p class="marketplace-header">Pending Orders</p>
-      <ul>
-        <li>Hi,User</li>
-        <li><img src="../img/marketPage/Profile Img.png" alt="" /></li>
-      </ul>
-      <ul class="hamburger-lines" onclick="toggleHamburger()">
-        <li class="lines"></li>
-        <li class="lines"></li>
-        <li class="lines"></li>
-      </ul>
-    </header>
-    <div class="content">
-      <aside>
-        <nav>
-          <ul>
-            <li>
-              <a href="marketPage.html"
-                ><i class="fa-solid fa-store"></i> Marketplace</a
-              >
-            </li>
-            <li>
-              <a href="inventoryPage.html">
-                <i class="fa-regular fa-clipboard"></i>
-                Inventory</a
-              >
-            </li>
-            <li>
-              <a href="pendingOrdersPage.html">
-                <i class="fa-regular fa-clock"></i>Pending Orders</a
-              >
-            </li>
-            <li>
-              <a href="myOrderPage.html">
-                <i class="fa-solid fa-bag-shopping"></i>
-                My Order</a
-              >
-            </li>
-            <li id="logout">
-              <a href="../index.html">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                Logout</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </aside>
-      <main class="main-content-pending">
-        <table class="pending-orders">
-          <thead>
-            <tr>
-              <th>Code</th>
-              <th>QTY</th>
-              <th>Price</th>
-              <th>Ordered By</th>
-              <th>Order Date</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>1</td>
-              <td>5000BGN</td>
-              <td>smechkov@vsgbg.com</td>
-              <td>2023-03-13 16:30</td>
-              <td class="action">
-                <button>Complete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>1</td>
-              <td>5000BGN</td>
-              <td>smechkov@vsgbg.com</td>
-              <td>2023-03-13 16:30</td>
-              <td class="action">
-                <button>Complete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>1</td>
-              <td>5000BGN</td>
-              <td>smechkov@vsgbg.com</td>
-              <td>2023-03-13 16:30</td>
-              <td class="action">
-                <button>Complete</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>1</td>
-              <td>5000BGN</td>
-              <td>smechkov@vsgbg.com</td>
-              <td>2023-03-13 16:30</td>
-              <td class="action">
-                <button>Complete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </main>
+    <div class="wrapper">
+      <header>
+        <a href="../index.html">
+          <img
+            src="../img/marketPage/vsg_marketplace-mini-logo 1.png"
+            class="homeLogo"
+            alt="VSG Logo"
+          />
+        </a>
+        <p class="marketplace-header">Pending Orders</p>
+        <ul>
+          <li>Hi,User</li>
+          <li><img src="../img/marketPage/Profile Img.png" alt="" /></li>
+        </ul>
+        <ul class="hamburger-lines" onclick="toggleHamburger()">
+          <li class="lines"></li>
+          <li class="lines"></li>
+          <li class="lines"></li>
+        </ul>
+      </header>
+      <div class="content">
+        <aside>
+          <nav>
+            <ul>
+              <li>
+                <a href="marketPage.html"
+                  ><i class="fa-solid fa-store"></i> Marketplace</a
+                >
+              </li>
+              <li>
+                <a href="inventoryPage.html">
+                  <i class="fa-regular fa-clipboard"></i>
+                  Inventory</a
+                >
+              </li>
+              <li>
+                <a href="pendingOrdersPage.html">
+                  <i class="fa-regular fa-clock"></i>Pending Orders</a
+                >
+              </li>
+              <li>
+                <a href="myOrderPage.html">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  My Order</a
+                >
+              </li>
+              <li id="logout">
+                <a href="../index.html">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  Logout</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <main class="main-content-pending">
+          <table class="pending-orders">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>QTY</th>
+                <th>Price</th>
+                <th>Ordered By</th>
+                <th>Order Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>5000BGN</td>
+                <td>smechkov@vsgbg.com</td>
+                <td>2023-03-13 16:30</td>
+                <td class="action">
+                  <button>Complete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>5000BGN</td>
+                <td>smechkov@vsgbg.com</td>
+                <td>2023-03-13 16:30</td>
+                <td class="action">
+                  <button>Complete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>5000BGN</td>
+                <td>smechkov@vsgbg.com</td>
+                <td>2023-03-13 16:30</td>
+                <td class="action">
+                  <button>Complete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>5000BGN</td>
+                <td>smechkov@vsgbg.com</td>
+                <td>2023-03-13 16:30</td>
+                <td class="action">
+                  <button>Complete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </div>
     </div>
   </body>
 </html>

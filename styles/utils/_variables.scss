@@ -1,5 +1,24 @@
+//fonts
+$roboto: "Roboto", sans-serif;
+$montserrat: "Montserrat", sans-serif;
+//units
+$tiny: 2px;
+$xs: 4px;
+$small: 8px;
+$medium: 16px;
+$medium-large: 24px;
+$large: 32px;
+$xl: 48px;
+$xxl: 82px;
+$font-links: 14px;
+$font-small: 12px;
+$font-default: 16px;
+$font-medium: 20px;
+$font-modal: 22px;
+$font-large: 30px;
 //colors
 $default-red: #ed1c25;
+$default-red-hover: lighten($default-red, 25%);
 $background-main-color: #f0f2f3;
 $button-success: #2e7d32;
 $pending-header: #dadcdd;
@@ -26,3 +45,6 @@ $radius-card-item: 5px 5px 0px 0px;
 $radius-pending-list-first-child: 10px 0 0 10px;
 $radius-pending-list-last-child: 0 10px 10px 0;
 $radius-image-modal: $radius-large $radius-large 0 0;
+//custom units
+$purchase-button-padding: 6px 6px 2px 6px;
+$purchase-modal-item-description-margin: 16px 32px 16px 16px;

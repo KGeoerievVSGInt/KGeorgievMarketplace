@@ -1,12 +1,15 @@
 @use "../" as *;
+@media only screen and (max-width: 1250px) {
+  .main-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 @media only screen and (max-width: 768px) {
   .logo-container {
     width: 70%;
     a {
-      width: 25%;
-    }
-    img {
-      margin-bottom: 15%;
+      font-size: 20px;
+      margin-top: 3em;
     }
   }
   .content {
@@ -29,6 +32,9 @@
   }
   .hamburger-lines {
     display: block;
+  }
+  .main-content {
+    grid-template-columns: 1fr;
   }
   main {
     flex-direction: column;
@@ -112,15 +118,15 @@
 .item-description {
   margin: 1em;
 }
-.item-info{
+.item-info {
   flex-direction: column;
-  &-left{
+  &-left {
     width: 100%;
-    &-name{
+    &-name {
       font-size: 1.25em;
     }
   }
-  &-right{
+  &-right {
     margin-top: 1em;
     align-items: flex-start;
   }

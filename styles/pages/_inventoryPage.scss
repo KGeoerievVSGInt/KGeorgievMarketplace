@@ -12,34 +12,34 @@
       margin-left: 0.625em;
       display: inline;
       width: 87%;
-      font-size: 1em;
+      font-size: $font-default;
       border: none;
     }
-    border-bottom: 2px solid #000;
+    border-bottom: $border-black;
   }
 
   &-button {
     margin-left: 1.25em;
     @include flex-container($justify: center, $align: center);
-    padding: 0.75em 1.25em;
+    padding: $small + $tiny $medium + $xs;
     border-radius: $radius-small;
     background-color: $button-success;
     color: $white;
-    gap: 1em;
+    gap: $medium;
 
     &-text {
       white-space: nowrap;
       flex-grow: 1;
-      font-size: 1em;
+      font-size: $medium;
       height: auto;
       margin: auto;
     }
     span {
-      padding: 0.625em;
+      padding: $small;
       display: inline-block;
       content: "";
-      width: 1em;
-      height: 1em;
+      width: $medium;
+      height: $medium;
       background-color: $white;
       clip-path: polygon(
         0 45%,
@@ -59,45 +59,46 @@
   }
 }
 .table {
-  @include flex-container($direction:column);
+  @include flex-container($direction: column);
   flex-grow: 1;
-  margin-top: 1.875em;
+  width: 100%;
+  margin-top: $large;
   border: $border-gray-pending;
   border-radius: $radius-small;
 }
 .inventory-content {
-  min-width: 57em;
+  min-width: 900px;
   border-spacing: 0;
   border-radius: $radius-small;
   th {
-    max-height: 3.125em;
+    max-height: $xl;
     text-align: left;
-    padding: 1em 0.75em;
+    padding: $medium $small;
   }
 
   td {
     border-top: $border-gray-pending;
     border-bottom: $border-gray-pending;
-    padding: 1em 0.75em;
+    padding: $medium $small;
   }
 }
 
 .actions {
   position: relative;
   button {
-    margin-right: 1em;
+    margin-right: $medium;
     background: none;
   }
 }
 .confirmation-popup {
   @include popup-common;
-  width: 20vw;
-  padding: 1em;
+  width: 250px;
+  padding: $medium;
   left: -140%;
   bottom: -200%;
   div {
     @include popup-div;
-    margin-top: 0.625em;
+    margin-top: $small;
   }
   button {
     @include popup-button;
@@ -113,6 +114,6 @@
 }
 .pagination-container {
   margin-top: auto;
-  height: 40px;
+  height: $xl;
   border-top: $border-gray-pending;
 }

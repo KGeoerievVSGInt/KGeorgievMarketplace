@@ -1,12 +1,12 @@
 @use "../" as *;
 .main-content {
   @include main-common-primary;
-  // @include flex-container($wrap:wrap, $align:flex-start);
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  padding: 2.5em 1.25em;
-  gap: 2.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: start;
+  justify-content: start;
+  padding: $large + $small $medium + $xs;
+  gap: $large;
   overflow: auto;
 }
 .card-item {
@@ -26,15 +26,15 @@
   @include flex-container($align: center);
   &-info {
     flex-grow: 1;
-    padding: 0.75em;
+    padding: $small;
     &-category {
       display: block;
-      font-size: 0.75em;
+      font-size: $font-small;
       color: $gray;
     }
   }
   &-purchase {
-    margin-right: 1em;
+    margin-right: $medium;
     @include flex-container($align: flex-start, $justify: stretch);
   }
 }
@@ -43,7 +43,7 @@
 
   span {
     display: block;
-    font-size: 0.5em;
+    font-size: $small + $tiny;
     color: $gray;
   }
   button {
@@ -53,7 +53,7 @@
     background-color: $white;
     span {
       color: $black;
-      font-size: 1em;
+      font-size: $font-small;
       display: inline;
     }
   }
@@ -61,18 +61,20 @@
     display: none;
     position: absolute;
     background-color: $white;
+    box-shadow: $shadow-table-item;
     z-index: 4;
     .option {
-      font-size: 0.83em;
+      font-size: $font-small;
+      padding: $xs;
       cursor: pointer;
     }
   }
 }
 .purchase-button {
-  margin-left: 10px;
+  margin-left: $small;
   border: none;
   display: inline-block;
-  padding: 0.375em 0.375em 0.125em 0.375em;
+  padding: $purchase-button-padding;
   background-color: $default-red;
   border-radius: $radius-xl;
 }
@@ -82,7 +84,7 @@
 .confirmation-popup {
   &.market {
     @include popup-common;
-    width: 17em;
+    width: 275px;
     left: 17%;
     bottom: -47%;
     z-index: 4;
@@ -100,7 +102,7 @@
 .confirmation-popup.market::before {
   content: "";
   @include popup-div-before;
-  top: -0.625em;
+  top: -10px;
   left: 48%;
 }
 .confirmation-popup.active {
@@ -126,8 +128,8 @@
     border-radius: $radius-large;
     button {
       position: absolute;
-      right: 1em;
-      top: 1em;
+      right: $medium;
+      top: $medium;
     }
     img {
       border-radius: $radius-image-modal;
@@ -139,15 +141,15 @@
 }
 .item-info {
   @include flex-container($justify: space-between);
-  margin: 1em 1em;
+  margin: $medium;
   &-left {
     width: 50%;
     &-name {
-      font-size: 1.375em;
+      font-size: $font-modal;
       font-weight: 700;
     }
     &-category {
-      font-size: 0.875em;
+      font-size: $font-links;
       color: $gray;
     }
   }
@@ -155,14 +157,14 @@
     @include flex-container($direction: column, $align: flex-end);
     &-price {
       font-weight: 700;
-      font-size: 1.375em;
+      font-size: $font-modal;
     }
     &-quantity {
-      font-size: 0.875em;
+      font-size: $font-links;
       color: $gray;
     }
   }
 }
 .item-description {
-  margin: 1em 2em 1em 1em;
+  margin: $purchase-modal-item-description-margin;
 }

@@ -9,122 +9,124 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <script src="marketPage.js"></script>
     <title>Marketplace</title>
   </head>
   <body>
-    <header>
-      <a href="../index.html">
-        <img
-          src="../img/marketPage/vsg_marketplace-mini-logo 1.png"
-          class="homeLogo"
-          alt="VSG Logo"
-        />
-      </a>
-      <p class="marketplace-header">My Orders</p>
-      <ul>
-        <li>Hi,User</li>
-        <li><img src="../img/marketPage/Profile Img.png" alt="" /></li>
-      </ul>
-      <ul class="hamburger-lines" onclick="toggleHamburger()">
-        <li class="lines"></li>
-        <li class="lines"></li>
-        <li class="lines"></li>
-      </ul>
-    </header>
-    <div class="content">
-      <aside>
-        <nav>
-          <ul>
-            <li>
-              <a href="marketPage.html"
-                ><i class="fa-solid fa-store"></i> Marketplace</a
-              >
-            </li>
-            <li>
-              <a href="inventoryPage.html">
-                <i class="fa-regular fa-clipboard"></i>
-                Inventory</a
-              >
-            </li>
-            <li>
-              <a href="pendingOrdersPage.html">
-                <i class="fa-regular fa-clock"></i>Pending Orders</a
-              >
-            </li>
-            <li>
-              <a href="myOrderPage.html">
-                <i class="fa-solid fa-bag-shopping"></i>
-                My Order</a
-              >
-            </li>
-            <li id="logout">
-              <a href="../index.html">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                Logout</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </aside>
-      <main class="main-content-orders">
-        <table class="pending-orders">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>QTY</th>
-              <th>Price</th>
-              <th>Order Date</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>MacBook Pro 16” M1 Max 32GB 1TB</td>
-              <td>1</td>
-              <td>5000BGN</td>
-              <td>2023-03-13 16:30</td>
-              <td class="action">Finished</td>
-            </tr>
-            <tr>
-              <td>MacBook Pro 16” M1 Max 32GB 1TB</td>
-              <td>1</td>
-              <td>5000BGN</td>
-              <td>2023-03-13 16:30</td>
-              <td class="action">
-                <p>Pending</p>
-                <button onclick="confirmPurchase(event)">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.8203 1.35156L7.17187 6L11.8203 10.6484L10.6484 11.8203L6 7.17187L1.35156 11.8203L0.179688 10.6484L4.82812 6L0.179688 1.35156L1.35156 0.179688L6 4.82812L10.6484 0.179688L11.8203 1.35156Z"
-                      fill="#ED1C25"
-                    />
-                  </svg>
-                </button>
-                <div class="confirmation-popup">
-                  <p>
-                    Are you sure you want to buy <strong>1</strong> item for
-                    <strong>5000 BGN</strong> ?
-                  </p>
-                  <div>
-                    <button>Yes</button>
-                    <button>No</button>
+    <div class="wrapper">
+      <header>
+        <a href="../index.html">
+          <img
+            src="../img/marketPage/vsg_marketplace-mini-logo 1.png"
+            class="homeLogo"
+            alt="VSG Logo"
+          />
+        </a>
+        <p class="marketplace-header">My Orders</p>
+        <ul>
+          <li>Hi,User</li>
+          <li><img src="../img/marketPage/Profile Img.png" alt="" /></li>
+        </ul>
+        <ul class="hamburger-lines" onclick="toggleHamburger()">
+          <li class="lines"></li>
+          <li class="lines"></li>
+          <li class="lines"></li>
+        </ul>
+      </header>
+      <div class="content">
+        <aside>
+          <nav>
+            <ul>
+              <li>
+                <a href="marketPage.html"
+                  ><i class="fa-solid fa-store"></i> Marketplace</a
+                >
+              </li>
+              <li>
+                <a href="inventoryPage.html">
+                  <i class="fa-regular fa-clipboard"></i>
+                  Inventory</a
+                >
+              </li>
+              <li>
+                <a href="pendingOrdersPage.html">
+                  <i class="fa-regular fa-clock"></i>Pending Orders</a
+                >
+              </li>
+              <li>
+                <a href="myOrderPage.html">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  My Order</a
+                >
+              </li>
+              <li id="logout">
+                <a href="../index.html">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  Logout</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <main class="main-content-orders">
+          <table class="pending-orders">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>QTY</th>
+                <th>Price</th>
+                <th>Order Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MacBook Pro 16” M1 Max 32GB 1TB</td>
+                <td>1</td>
+                <td>5000BGN</td>
+                <td>2023-03-13 16:30</td>
+                <td class="action">Finished</td>
+              </tr>
+              <tr>
+                <td>MacBook Pro 16” M1 Max 32GB 1TB</td>
+                <td>1</td>
+                <td>5000BGN</td>
+                <td>2023-03-13 16:30</td>
+                <td class="action">
+                  <p>Pending</p>
+                  <button onclick="confirmPurchase(event)">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.8203 1.35156L7.17187 6L11.8203 10.6484L10.6484 11.8203L6 7.17187L1.35156 11.8203L0.179688 10.6484L4.82812 6L0.179688 1.35156L1.35156 0.179688L6 4.82812L10.6484 0.179688L11.8203 1.35156Z"
+                        fill="#ED1C25"
+                      />
+                    </svg>
+                  </button>
+                  <div class="confirmation-popup">
+                    <p>
+                      Are you sure you want to buy <strong>1</strong> item for
+                      <strong>5000 BGN</strong> ?
+                    </p>
+                    <div>
+                      <button>Yes</button>
+                      <button>No</button>
+                    </div>
                   </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </main>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </div>
     </div>
   </body>
 </html>

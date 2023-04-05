@@ -7,6 +7,6 @@
 }
 .mainCommon {
   @extend .mainCommonPrimary;
-  padding: 2em 1.25em;
-  @include flex-container($direction:column, $align:flex-end);
+  padding: $large $medium + $xs;
+  @include flex-container($direction: column, $align: flex-end);
 }
