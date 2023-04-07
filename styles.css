@@ -421,6 +421,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  width: 400px;
 }
 .add-new-input {
   display: flex;
@@ -428,11 +429,23 @@ body {
   border-bottom: 1px solid #000;
 }
 .add-new-input input {
-  margin-left: 0.625em;
+  width: 100%;
+  margin-left: 10px;
   display: inline;
-  width: 87%;
   font-size: 16px;
   border: none;
+  outline: none;
+}
+.add-new-input::before {
+  content: "";
+  background-image: url("../../img/inventory/Vector_magnifying_glass.svg");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  outline: none;
+}
+.add-new-input:focus-within {
+  outline: 1px solid #000;
 }
 .add-new-button {
   margin-left: 1.25em;
@@ -452,16 +465,6 @@ body {
   height: auto;
   margin: auto;
 }
-.add-new-button span {
-  padding: 8px;
-  display: inline-block;
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-color: #ffffff;
-  -webkit-clip-path: polygon(0 45%, 45% 45%, 45% 0, 55% 0, 55% 45%, 100% 45%, 100% 55%, 55% 55%, 55% 100%, 45% 100%, 45% 55%, 0 55%);
-          clip-path: polygon(0 45%, 45% 45%, 45% 0, 55% 0, 55% 45%, 100% 45%, 100% 55%, 55% 55%, 55% 100%, 45% 100%, 45% 55%, 0 55%);
-}
 
 .table {
   display: flex;
@@ -471,6 +474,7 @@ body {
   margin-top: 32px;
   border: 1px solid #dadcdd;
   border-radius: 6px;
+  overflow: auto;
 }
 
 .inventory-content {
@@ -703,6 +707,7 @@ body {
     margin-top: 3em;
   }
   .content aside {
+    max-width: 100%;
     flex-grow: 1;
     display: none;
   }
@@ -737,6 +742,13 @@ body {
   }
   .main-content-inventory {
     align-items: flex-start;
+  }
+  .main-content-inventory .add-new {
+    width: auto;
+    justify-content: flex-start;
+  }
+  .main-content-inventory .add-new-input input {
+    font-size: 14px;
   }
   .main-content-pending .pending-orders {
     border-spacing: 0;
