@@ -54,15 +54,14 @@
   }
   .main-content-inventory {
     align-items: flex-start;
-    .add-new{
+    .add-new {
       width: auto;
       justify-content: flex-start;
-      &-input{
-        input{
+      &-input {
+        input {
           font-size: $font-links;
         }
       }
-
     }
   }
   .main-content-pending {
@@ -123,6 +122,32 @@
       }
       width: 100%;
       margin: 2em 1em 2em 1em;
+    }
+    .item-management {
+      overflow: auto;
+      width: 100%;
+      margin: 0 16px;
+      .item-data {
+        &-form {
+          flex-direction: column;
+          &-left {
+            div {
+              label {
+                top: 0;
+              }
+              input:focus ~ label,
+              input:not(:placeholder-shown) ~ label {
+                display: block;
+              }
+            }
+          }
+          &-right {
+            div {
+              flex-direction: row;
+            }
+          }
+        }
+      }
     }
   }
 }

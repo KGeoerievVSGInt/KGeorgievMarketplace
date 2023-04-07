@@ -1,6 +1,7 @@
 //fonts
 $roboto: "Roboto", sans-serif;
 $montserrat: "Montserrat", sans-serif;
+$inter: "Inter", sans-serif;
 //units
 $tiny: 2px;
 $xs: 4px;
@@ -13,6 +14,7 @@ $xxl: 82px;
 $font-links: 14px;
 $font-small: 12px;
 $font-default: 16px;
+$font-buttons: 18px;
 $font-medium: 20px;
 $font-modal: 22px;
 $font-large: 30px;
@@ -21,6 +23,8 @@ $default-red: #ed1c25;
 $default-red-hover: lighten($default-red, 25%);
 $background-main-color: #f0f2f3;
 $button-success: #2e7d32;
+$button-warning: #ed6c02;
+$button-remove: #ed1c25;
 $pending-header: #dadcdd;
 $white: #ffffff;
 $gray: #9a9a9a;

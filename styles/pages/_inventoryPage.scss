@@ -15,8 +15,6 @@
       margin-left: 10px;
       display: inline;
       font-size: $font-default;
-      border: none;
-      outline: none;
     }
     &::before {
       content: "";
@@ -108,4 +106,93 @@
   margin-top: auto;
   height: $xl;
   border-top: $border-gray-pending;
+}
+.item-management {
+  width: 600px;
+  height: 700px;
+  background-color: $white;
+  position: relative;
+  z-index: 4;
+  border-radius: $radius-large;
+  padding: $xl;
+
+  .item-data {
+    position: relative;
+    height: 100%;
+    @include flex-container($direction: column, $align: center);
+    &-form {
+      width: 100%;
+      @include flex-container();
+      gap: 20px;
+      &-left {
+        .modal-header {
+          font-size: $medium-large;
+          font-weight: 700;
+        }
+        div {
+          position: relative;
+          @include flex-container($direction: column);
+          label {
+            font-size: $font-links;
+            color: $gray;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+          }
+          input:focus ~ label,
+          input:not(:placeholder-shown) ~ label,
+          textarea:focus ~ label,
+          textarea:not(:placeholder-shown) ~ label {
+            display: none;
+          }
+          [for="item-description-area"] {
+            top: 24px;
+          }
+        }
+        flex-grow: 1;
+        @include flex-container($direction: column, $justify: center);
+        input {
+          border-bottom: $border-gray-pending;
+          margin-top: 62px;
+        }
+        textarea {
+          border-bottom: $border-gray-pending;
+          margin-top: 25px;
+        }
+        .category-dropdown {
+          margin-top: 62px;
+          color: $gray;
+          border-bottom: $border-gray-pending;
+        }
+      }
+      &-right {
+        flex-grow: 1;
+        @include flex-container(
+          $direction: column,
+          $justify: center,
+          $align: center
+        );
+        div {
+          @include flex-container($direction:column);
+          button {
+            margin-top: 20px;
+            width: 120px;
+          }
+        }
+      }
+    }
+    &-button-container {
+      margin: 35px 0;
+      button {
+        width: 150px;
+      }
+    }
+    .close-button {
+      cursor: pointer;
+      background-color: transparent;
+      position: absolute;
+      right: -15px;
+      top: -15px;
+    }
+  }
 }

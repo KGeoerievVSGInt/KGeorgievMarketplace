@@ -12,6 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="marketPage.js"></script>
     <title>Inventory</title>
   </head>
@@ -76,9 +82,10 @@
             <div class="add-new-input">
               <input type="text" id="new-add" placeholder="Search..." />
             </div>
-            <button class="add-new-button">
-              
-              <p class="add-new-button-text"><i class="fa-regular fa-plus"></i> Add new</p>
+            <button class="add-new-button" onclick="toggleDetailsModal(event)">
+              <p class="add-new-button-text">
+                <i class="fa-regular fa-plus"></i> Add new
+              </p>
             </button>
           </form>
           <div class="table">
@@ -101,7 +108,7 @@
                   <td>0</td>
                   <td>2</td>
                   <td class="actions">
-                    <button>
+                    <button onclick="toggleDetailsModal(event)">
                       <svg
                         width="12"
                         height="12"
@@ -143,6 +150,76 @@
             <div class="pagination-container"></div>
           </div>
         </main>
+      </div>
+      <div class="modal">
+        <div class="item-management">
+          <form class="item-data">
+            <div class="item-data-form">
+              <div class="item-data-form-left">
+                <p class="modal-header">Add New Item</p>
+                <div>
+                  <input id="code" type="text" placeholder=" " />
+                  <label for="code">Code *</label>
+                </div>
+                <div>
+                  <input id="name" type="text" placeholder=" " />
+                  <label for="name">Name *</label>
+                </div>
+                <div>
+                  <textarea
+                    placeholder=" "
+                    name=""
+                    id="item-description-area"
+                    cols="40"
+                    rows="6"
+                  ></textarea>
+                  <label for="item-description-area">Description</label>
+                </div>
+                <div class="category-dropdown">Category</div>
+                <div>
+                  <input id="qty-for-sale" type="number" placeholder=" " />
+                  <label for="qty-for-sale">Qty For Sale</label>
+                </div>
+                <div>
+                  <input id="sale-price" type="number" placeholder=" " />
+                  <label for="sale-price">Sale Price</label>
+                </div>
+                <div>
+                  <input id="qty" type="text" placeholder=" " />
+                  <label for="qty">Qty *</label>
+                </div>
+              </div>
+              <div class="item-data-form-right">
+                <img
+                  src="../img/inventory/no_image-placeholder.png"
+                  alt="New Item Image"
+                />
+                <div>
+                  <button class="button button-warning">Upload</button>
+                  <button class="button button-remove">Remove</button>
+                </div>
+              </div>
+            </div>
+            <div class="item-data-button-container">
+              <button class="button button-success">Add</button>
+            </div>
+            <button class="close-button" onclick="toggleDetailsModal(event)">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.8203 1.35156L7.17187 6L11.8203 10.6484L10.6484 11.8203L6 7.17187L1.35156 11.8203L0.179688 10.6484L4.82812 6L0.179688 1.35156L1.35156 0.179688L6 4.82812L10.6484 0.179688L11.8203 1.35156Z"
+                  fill="#000"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="backdrop"></div>
       </div>
     </div>
   </body>

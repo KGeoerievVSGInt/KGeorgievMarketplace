@@ -9,6 +9,14 @@
   color: #000;
   text-decoration: none;
 }
+* input {
+  border: none;
+  outline: none;
+}
+* textarea {
+  border: none;
+  outline: none;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -433,8 +441,6 @@ body {
   margin-left: 10px;
   display: inline;
   font-size: 16px;
-  border: none;
-  outline: none;
 }
 .add-new-input::before {
   content: "";
@@ -549,6 +555,103 @@ body {
   margin-top: auto;
   height: 48px;
   border-top: 1px solid #dadcdd;
+}
+
+.item-management {
+  width: 600px;
+  height: 700px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 4;
+  border-radius: 20px;
+  padding: 48px;
+}
+.item-management .item-data {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-management .item-data-form {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.item-management .item-data-form-left {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item-management .item-data-form-left .modal-header {
+  font-size: 24px;
+  font-weight: 700;
+}
+.item-management .item-data-form-left div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.item-management .item-data-form-left div label {
+  font-size: 14px;
+  color: #9a9a9a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.item-management .item-data-form-left div input:not(:-moz-placeholder-shown) ~ label, .item-management .item-data-form-left div textarea:not(:-moz-placeholder-shown) ~ label {
+  display: none;
+}
+.item-management .item-data-form-left div input:focus ~ label,
+.item-management .item-data-form-left div input:not(:placeholder-shown) ~ label,
+.item-management .item-data-form-left div textarea:focus ~ label,
+.item-management .item-data-form-left div textarea:not(:placeholder-shown) ~ label {
+  display: none;
+}
+.item-management .item-data-form-left div [for=item-description-area] {
+  top: 24px;
+}
+.item-management .item-data-form-left input {
+  border-bottom: 1px solid #dadcdd;
+  margin-top: 62px;
+}
+.item-management .item-data-form-left textarea {
+  border-bottom: 1px solid #dadcdd;
+  margin-top: 25px;
+}
+.item-management .item-data-form-left .category-dropdown {
+  margin-top: 62px;
+  color: #9a9a9a;
+  border-bottom: 1px solid #dadcdd;
+}
+.item-management .item-data-form-right {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item-management .item-data-form-right div {
+  display: flex;
+  flex-direction: column;
+}
+.item-management .item-data-form-right div button {
+  margin-top: 20px;
+  width: 120px;
+}
+.item-management .item-data-button-container {
+  margin: 35px 0;
+}
+.item-management .item-data-button-container button {
+  width: 150px;
+}
+.item-management .item-data .close-button {
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  right: -15px;
+  top: -15px;
 }
 
 .main-content-pending {
@@ -956,6 +1059,27 @@ body {
   .modal .modal-content img {
     height: 25%;
   }
+  .modal .item-management {
+    overflow: auto;
+    width: 100%;
+    margin: 0 16px;
+  }
+  .modal .item-management .item-data-form {
+    flex-direction: column;
+  }
+  .modal .item-management .item-data-form-left div label {
+    top: 0;
+  }
+  .modal .item-management .item-data-form-left div input:not(:-moz-placeholder-shown) ~ label {
+    display: block;
+  }
+  .modal .item-management .item-data-form-left div input:focus ~ label,
+  .modal .item-management .item-data-form-left div input:not(:placeholder-shown) ~ label {
+    display: block;
+  }
+  .modal .item-management .item-data-form-right div {
+    flex-direction: row;
+  }
 }
 .item-description {
   margin: 1em;
@@ -973,4 +1097,25 @@ body {
 .item-info-right {
   margin-top: 1em;
   align-items: flex-start;
+}
+
+.button {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.button-success {
+  background-color: #2e7d32;
+}
+
+.button-warning {
+  background-color: #ed6c02;
+}
+
+.button-remove {
+  background-color: #ed1c25;
 }
