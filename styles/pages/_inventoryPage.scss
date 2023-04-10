@@ -108,14 +108,12 @@
   border-top: $border-gray-pending;
 }
 .item-management {
-  width: 600px;
-  height: 700px;
   background-color: $white;
   position: relative;
   z-index: 4;
   border-radius: $radius-large;
   padding: $xl;
-
+  overflow: auto;
   .item-data {
     position: relative;
     height: 100%;

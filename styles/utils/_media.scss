@@ -116,6 +116,7 @@
     }
   }
   .modal {
+    align-items: stretch;
     .modal-content {
       img {
         height: 25%;
@@ -124,9 +125,8 @@
       margin: 2em 1em 2em 1em;
     }
     .item-management {
-      overflow: auto;
-      width: 100%;
-      margin: 0 16px;
+      box-sizing: border-box;
+      margin: 32px 16px;
       .item-data {
         &-form {
           flex-direction: column;
@@ -144,8 +144,16 @@
           &-right {
             div {
               flex-direction: row;
+              button{
+                margin: $medium;
+              }
             }
+
           }
+          
+        }
+        &-button-container{
+          padding-bottom: $xl;
         }
       }
     }

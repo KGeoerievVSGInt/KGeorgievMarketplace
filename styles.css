@@ -351,7 +351,7 @@ body {
 .modal {
   width: 100%;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
@@ -558,13 +558,12 @@ body {
 }
 
 .item-management {
-  width: 600px;
-  height: 700px;
   background-color: #ffffff;
   position: relative;
   z-index: 4;
   border-radius: 20px;
   padding: 48px;
+  overflow: auto;
 }
 .item-management .item-data {
   position: relative;
@@ -1052,6 +1051,9 @@ body {
   .main-content-orders .pending-orders td:nth-of-type(6):before {
     content: "Status:";
   }
+  .modal {
+    align-items: stretch;
+  }
   .modal .modal-content {
     width: 100%;
     margin: 2em 1em 2em 1em;
@@ -1060,9 +1062,8 @@ body {
     height: 25%;
   }
   .modal .item-management {
-    overflow: auto;
-    width: 100%;
-    margin: 0 16px;
+    box-sizing: border-box;
+    margin: 32px 16px;
   }
   .modal .item-management .item-data-form {
     flex-direction: column;
@@ -1079,6 +1080,12 @@ body {
   }
   .modal .item-management .item-data-form-right div {
     flex-direction: row;
+  }
+  .modal .item-management .item-data-form-right div button {
+    margin: 16px;
+  }
+  .modal .item-management .item-data-button-container {
+    padding-bottom: 48px;
   }
 }
 .item-description {
